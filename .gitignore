@@ -5,3 +5,18 @@ obj/
 # Ignorar archivos de configuración del usuario
 *.user
 *.suo
+*.vs/
+
+# Ignorar paquetes NuGet descargados
+packages/
+
+# Ignorar directorios de depuración y compilación
+Debug/
+Release/
+
+# Ignorar configuraciones locales
+.vscode/
+.idea/
+
+# Ignorar archivos de prueba automáticos
+TestResults/
