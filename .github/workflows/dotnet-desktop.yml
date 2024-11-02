@@ -56,10 +56,11 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: your-solution-name                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Test_Project_Path: your-test-project-path                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
-      Wap_Project_Directory: your-wap-project-directory-name    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
-      Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+  Solution_Name: TrpoLabs.sln   # Cambia "your-solution-name" por el nombre de tu solución, i.e., TrpoLabs.sln.
+  Test_Project_Path: TrpoLabs.Tests\TrpoLabs.Tests.csproj  # Ruta de tu proyecto de pruebas, si tienes uno.
+  Wap_Project_Directory: TrpoLabs.Package  # Nombre del directorio de tu proyecto de paquete.
+  Wap_Project_Path: TrpoLabs.Package\TrpoLabs.Package.wapproj  # Ruta al archivo wapproj.
+
 
     steps:
     - name: Checkout
