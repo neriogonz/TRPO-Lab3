@@ -1,0 +1,7 @@
+# Ignorar archivos y carpetas de compilación
+bin/
+obj/
+
+# Ignorar archivos de configuración del usuario
+*.user
+*.suo
