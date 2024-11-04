@@ -1,0 +1,54 @@
+﻿@model TrpoLabs.WebApp.Models.CalculateAreaViewModel
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт площади поверхности конуса</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center text-primary">Расчёт площади поверхности конуса</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <form asp-action="Index" method="post">
+                    <div class="form-group">
+                        <label for="radio">Введите радиус:</label>
+                        <input type="number" step="0.01" class="form-control" id="radio" name="Radio" value="@Model.Radio" required />
+                        <span asp-validation-for="Radio" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="altura">Введите высоту:</label>
+                        <input type="number" step="0.01" class="form-control" id="altura" name="Altura" value="@Model.Altura" required />
+                        <span asp-validation-for="Altura" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Вычислить площадь</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="~/images/volumen-del-cono-1.png" alt="Конус" class="img-fluid" />
+            </div>
+        </div>
+
+        @if (Model.Resultado != 0)
+        {
+            <div class="mt-5">
+                <h5 class="text-success">Площадь конуса: @Model.Resultado</h5>
+            </div>
+        }
+
+        <div class="mt-5">
+            <h5>Используемая формула для расчёта площади поверхности конуса:</h5>
+            <p class="text-danger">S = πr ( r + √(h² + r²) )</p>
+            <p class="text-danger">a² + b² = c²</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
