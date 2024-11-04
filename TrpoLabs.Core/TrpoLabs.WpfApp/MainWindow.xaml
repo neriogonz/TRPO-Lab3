@@ -1,0 +1,43 @@
+﻿<Window x:Class="TrpoLabs.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Расчёт площади поверхности конуса" Height="600" Width="800">
+    <Grid>
+        <TextBlock Text="Расчёт площади поверхности конуса"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"
+                   Margin="0,20,0,0"
+                   FontSize="26" FontWeight="Bold" Foreground="DarkSlateBlue"/>
+
+        <Image Source="pack://application:,,,/TrpoLabs.WpfApp;component/volumen-del-cono-1.png"
+               HorizontalAlignment="Right" VerticalAlignment="Top"
+               Margin="0,100,217,0" Width="186" Height="258"/>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">
+            <TextBlock Text="Введите радиус:"
+                       FontSize="16" FontWeight="Bold" Foreground="DarkSlateGray"/>
+            <TextBox x:Name="RadioTextBox" Width="200" Margin="0,10,0,20"/>
+
+            <TextBlock Text="Введите высоту:"
+                       FontSize="16" FontWeight="Bold" Foreground="DarkSlateGray"/>
+            <TextBox x:Name="AlturaTextBox" Width="200" Margin="0,10,0,20"/>
+
+            <Button Content="Вычислить площадь"
+                    HorizontalAlignment="Left" Width="200"
+                    Background="SteelBlue" Foreground="White" FontWeight="Bold"
+                    Click="CalcularAreaButton_Click"/>
+        </StackPanel>
+
+        <TextBlock x:Name="ResultadoTextBlock"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   Margin="0,0,0,70" FontSize="18" FontWeight="Bold" Foreground="DarkGreen"/>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,130">
+            <TextBlock Text="Используемая формула для расчёта площади поверхности конуса:"
+                       FontSize="18" FontWeight="Bold" Foreground="DarkSlateGray"/>
+            <TextBlock Text="S = πr ( r + √(h² + r²) )"
+                       FontSize="20" FontWeight="Bold" Foreground="DarkRed" Margin="0,0,0,10"/>
+            <TextBlock Text="a² + b² = c²"
+                       FontSize="20" FontWeight="Bold" Foreground="DarkRed"/>
+        </StackPanel>
+    </Grid>
+</Window>

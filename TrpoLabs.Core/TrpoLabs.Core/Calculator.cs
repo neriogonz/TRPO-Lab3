@@ -6,5 +6,13 @@
         {
             return a + b;
         }
+
+        public double CalcularAreaCono(double radio, double altura)
+        {
+            double area = Math.PI * radio * (radio + Math.Sqrt(altura * altura + radio * radio));
+            return area;
+        }
     }
 }
+
+
