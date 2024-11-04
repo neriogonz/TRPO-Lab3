@@ -39,5 +39,5 @@ jobs:
       run: dotnet test TrpoLabs.Core/TrpoLabs.Core.sln --no-build --verbosity normal
 
     - name: Test
-      run: dotnet test TrpoLabs.sln --no-build --verbosity normal
+      run: dotnet test TrpoLabs.Core/TrpoLabs.Core.sln --no-build --verbosity normal
 
