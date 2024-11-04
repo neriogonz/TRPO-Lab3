@@ -15,26 +15,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Checkout the repository to the runner
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # 2. Setup .NET
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
 
-    # 3. Restore dependencies
-    # Make sure to point to the correct solution file or project file
     - name: Restore dependencies
       run: dotnet restore TrpoLabs.Core/TrpoLabs.Core.sln
 
-    # 4. Build the project
     - name: Build
       run: dotnet build TrpoLabs.Core/TrpoLabs.Core.sln --no-restore
 
-    # 5. Run the tests
     - name: Test
       run: dotnet test TrpoLabs.Core/TrpoLabs.Core.sln --no-build --verbosity normal
 
