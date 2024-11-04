@@ -32,9 +32,12 @@ jobs:
 
     # 4. Build the project
     - name: Build
-      run: dotnet build TrpoLabs.sln --no-restore
+      run: dotnet build TrpoLabs.Core/TrpoLabs.Core.sln --no-restore
 
     # 5. Run the tests
+    - name: Test
+      run: dotnet test TrpoLabs.Core/TrpoLabs.Core.sln --no-build --verbosity normal
+
     - name: Test
       run: dotnet test TrpoLabs.sln --no-build --verbosity normal
 
