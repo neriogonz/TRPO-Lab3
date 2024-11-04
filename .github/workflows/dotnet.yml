@@ -28,7 +28,7 @@ jobs:
     # 3. Restore dependencies
     # Make sure to point to the correct solution file or project file
     - name: Restore dependencies
-      run: dotnet restore TrpoLabs.sln
+      run: dotnet restore TrpoLabs.Core/TrpoLabs.Core.sln
 
     # 4. Build the project
     - name: Build
